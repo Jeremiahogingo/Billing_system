@@ -80,7 +80,7 @@ int main() {
             case 1: // Generate and save a new invoice
                 printf("Please enter the name of the customer: ");
                 fgets(ord.customer, sizeof(ord.customer), stdin);
-                ord.customer[strcspn(ord.customer, "\n")] = 0; // Remove newline
+                ord.customer[strcspn(ord.customer, "\n")] = 0; 
                 strcpy(ord.date, __DATE__);
                 printf("Please enter the total items: \t");
                 scanf("%d", &No_of_items);
@@ -94,10 +94,10 @@ int main() {
                 ord.number_of_items = No_of_items; 
 
                 for (int i = 0; i < No_of_items; i++) {
-                    fgetc(stdin); // To consume newline
+                    fgetc(stdin); 
                     printf("\n\nPlease enter item %d: \t", i + 1);
                     fgets(ord.itm[i].item, sizeof(ord.itm[i].item), stdin); 
-                    ord.itm[i].item[strcspn(ord.itm[i].item, "\n")] = 0; // Remove newline
+                    ord.itm[i].item[strcspn(ord.itm[i].item, "\n")] = 0; 
                     printf("Please enter the quantity:\t");
                     scanf("%d", &ord.itm[i].Qty);
                     printf("Please enter the unit price:\t");
